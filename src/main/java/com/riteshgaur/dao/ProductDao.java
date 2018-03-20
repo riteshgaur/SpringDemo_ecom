@@ -5,6 +5,10 @@ import com.riteshgaur.model.Product;
 import java.util.ArrayList;
 import java.util.List;
 
+
+//Lets create some dummy data just to check the waters
+
+
 public class ProductDao {
 
 
