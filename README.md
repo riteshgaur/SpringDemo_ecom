@@ -6,7 +6,7 @@ Simple E-com Web App
 
 -Maven
 
--Stupid code (without comments to start with. Documentation you said… ah!)
+-regular code (without comments to start with. Documentation you said… ah!)
 
 -magic code ( I don't know why its working so lets better don't touch that block)
 
