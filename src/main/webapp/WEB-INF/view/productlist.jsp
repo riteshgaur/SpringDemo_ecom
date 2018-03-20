@@ -17,7 +17,7 @@
     <th>Name</th>
     <th>Category</th>
     <th>Condition</th>
-    <th>Price</th>
+    <th>Price</th>g
 
     </thead>
     <tr>
