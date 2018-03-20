@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<link href="<c:url value="/resources/bootstrap4/font/css/open-iconic-bootstrap.css"/>" rel="stylesheet">
 
 <%@include file="/WEB-INF/views/HeaderFooter/header.jsp" %>
 
@@ -21,6 +22,7 @@
                 <th>Category</th>
                 <th>Condition</th>
                 <th>Price</th>
+                <th>Action</th>
             </tr>
             </thead>
 
@@ -33,6 +35,8 @@
                     <td>${product.condition}</td>
                     <td>$${product.price}</td>
                     <!--above $ for price tag, do not get confused with JSTL $ next to it -->
+                    <td><img src="<c:url value="/resources/bootstrap4/svg/aperture.svg"/>" alt="icon name"
+                             style="width: 16px; height: 16px"></td>
                 </tr>
 
 
