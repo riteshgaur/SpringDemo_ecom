@@ -21,7 +21,7 @@ public class ProductDao {
 
         p1.setName("Guitar");
         p1.setCategory("Instrument");
-        p1.setDescription("Spanish");
+        p1.setDescription("Spanish Guitar");
         p1.setPrice(1900.00);
         p1.setCondition("New");
         p1.setStatus("active");
@@ -31,9 +31,9 @@ public class ProductDao {
         Product p2 = new Product();
         p2.setName("Art of Living");
         p2.setCategory("Books");
-        p2.setDescription("Lifestyle");
+        p2.setDescription("Change of Lifestyle, improve your life");
         p2.setPrice(10.00);
-        p2.setCondition("New");
+        p2.setCondition("Old");
         p2.setStatus("active");
         p2.setInstock(100);
         p2.setManufacturer("RGPubHouse");

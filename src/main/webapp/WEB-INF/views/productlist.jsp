@@ -1,6 +1,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<head>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%--<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -41,7 +42,8 @@
             </form>
         </div>
     </nav>
-</header>
+</header>--%>
+<%@include file="/WEB-INF/views/HeaderFooter/header.jsp" %>
 
 <br>
 
@@ -51,17 +53,15 @@
         <h1>All Products</h1>
         <p> All the listed products</p>
 
-        <table class="table table-hover table-responsive table-bordered">
+        <table class="table table-hover table-responsive">
 
             <thead class="thead-dark">
             <tr>
-                <th>Photo Thumb</th>
+                <th>Image</th>
                 <th>Name</th>
                 <th>Category</th>
                 <th>Condition</th>
                 <th>Price</th>
-
-
             </tr>
             </thead>
 
@@ -71,19 +71,13 @@
                     <td><img src="#" alt="productImage"></td>
                     <td>${product.name}</td>
                     <td>${product.category}</td>
-                    <td>${product.category}</td>
-                    <td>${product.price}</td>
+                    <td>${product.condition}</td>
+                    <td>$${product.price}</td>
+                    <!--above $ for price tag, do not get confused with JSTL $ next to it -->
                 </tr>
 
 
             </c:forEach>
-
-
-
-
-
-
-
 
 
         </table>
@@ -96,7 +90,7 @@
 <!-- /.container -->
 
 
-<!-- FOOTER -->
+<%--<!-- FOOTER -->
 <footer class="container">
     <p class="float-right"><a href="#">Back to top</a></p>
     <p>&copy; 2017-2018 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
@@ -116,4 +110,6 @@ window.jQuery || document.write('<script src="<c:url value="/resources/bootstrap
 
 </body>
 
-</html>
+</html>--%>
+
+<%@include file="/WEB-INF/views/HeaderFooter/footer.jsp" %>
