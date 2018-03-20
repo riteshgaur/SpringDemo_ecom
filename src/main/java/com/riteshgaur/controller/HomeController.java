@@ -24,8 +24,8 @@ public class HomeController {
     public String getProducts(Model model){
 
         List<Product> productList = productDao.getProductList() ;
-        Product product = productList.get(0);
-        model.addAttribute(product);
+       // Product products = productList.get();
+        model.addAttribute("productList",productList);
 
         return "productlist";
 

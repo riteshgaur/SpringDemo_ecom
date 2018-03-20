@@ -39,14 +39,14 @@ public class ProductDao {
         p2.setManufacturer("RGPubHouse");
 
         Product p3 = new Product();
-        p2.setName("Guitar Pick");
-        p2.setCategory("Instrument");
-        p2.setDescription("Guitar Pick HARD");
-        p2.setPrice(5.00);
-        p2.setCondition("New");
-        p2.setStatus("active");
-        p2.setInstock(100);
-        p2.setManufacturer("Gibson");
+        p3.setName("Guitar Pick");
+        p3.setCategory("Instrument");
+        p3.setDescription("Guitar Pick HARD");
+        p3.setPrice(5.00);
+        p3.setCondition("New");
+        p3.setStatus("active");
+        p3.setInstock(100);
+        p3.setManufacturer("Gibson");
 
 
 

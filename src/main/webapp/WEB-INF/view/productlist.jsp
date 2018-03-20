@@ -63,18 +63,28 @@
 
 
             </tr>
-            <tr>
-            <tr>
-                <td><img src="#" alt="productImage"></td>
-                <td>${product.name}</td>
-                <td>${product.category}</td>
-                <td>${product.category}</td>
-                <td>${product.price}</td>
-            </tr>
-
-
-            </tr>
             </thead>
+
+            <c:forEach items="${productList}" var="product">
+
+                <tr>
+                    <td><img src="#" alt="productImage"></td>
+                    <td>${product.name}</td>
+                    <td>${product.category}</td>
+                    <td>${product.category}</td>
+                    <td>${product.price}</td>
+                </tr>
+
+
+            </c:forEach>
+
+
+
+
+
+
+
+
 
         </table>
 
