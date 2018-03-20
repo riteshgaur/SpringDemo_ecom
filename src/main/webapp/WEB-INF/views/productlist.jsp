@@ -6,10 +6,10 @@
 
 <br>
 
-<div class="container-fluid">
-    <div class="container">
+<div class="container">
 
-        <h1>All Products</h1>
+
+    <h1>All Products</h1>
         <p> All the listed products</p>
 
         <table class="table table-hover table-responsive">
@@ -41,8 +41,6 @@
 
         </table>
 
-
-    </div>
 
 
 </div>
