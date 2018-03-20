@@ -5,7 +5,6 @@ import com.riteshgaur.model.Product;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -29,6 +28,11 @@ public class HomeController {
 
         return "productlist";
 
+    }
+
+    @RequestMapping("/viewProduct")
+    public String viewProduct() {
+        return "viewProduct";
     }
 
 
