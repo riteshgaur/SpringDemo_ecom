@@ -18,6 +18,7 @@ public class ProductDao {
 
         Product p1 = new Product();
 
+
         p1.setName("Guitar");
         p1.setCategory("Instrument");
         p1.setDescription("Spanish");
@@ -27,8 +28,32 @@ public class ProductDao {
         p1.setInstock(10);
         p1.setManufacturer("Gibson");
 
+        Product p2 = new Product();
+        p2.setName("Art of Living");
+        p2.setCategory("Books");
+        p2.setDescription("Lifestyle");
+        p2.setPrice(10.00);
+        p2.setCondition("New");
+        p2.setStatus("active");
+        p2.setInstock(100);
+        p2.setManufacturer("RGPubHouse");
+
+        Product p3 = new Product();
+        p2.setName("Guitar Pick");
+        p2.setCategory("Instrument");
+        p2.setDescription("Guitar Pick HARD");
+        p2.setPrice(5.00);
+        p2.setCondition("New");
+        p2.setStatus("active");
+        p2.setInstock(100);
+        p2.setManufacturer("Gibson");
+
+
+
         productList = new ArrayList<Product>();
         productList.add(p1);
+        productList.add(p2);
+        productList.add(p3);
         return productList;
 
 
