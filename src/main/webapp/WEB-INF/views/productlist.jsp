@@ -4,10 +4,11 @@
 
 <%@include file="/WEB-INF/views/HeaderFooter/header.jsp" %>
 
-<br>
+
 
 <div class="container">
 
+    <br>
 
     <h1>All Products</h1>
         <p> All the listed products</p>
