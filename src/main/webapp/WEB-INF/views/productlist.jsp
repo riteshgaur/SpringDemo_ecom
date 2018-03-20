@@ -7,7 +7,6 @@
 
 
 <div class="container">
-
     <br>
 
     <h1>All Products</h1>
