@@ -12,6 +12,9 @@ Simple E-com Web App
 
 -ghost code(I can't find that thing.. but I know its there)
 
+Theme in use: http://getbootstrap.com/docs/4.0/examples/carousel/
+IDE: IntelliJ IDEA 
+
 
 
 
