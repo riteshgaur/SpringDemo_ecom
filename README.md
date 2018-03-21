@@ -1,4 +1,4 @@
-**Simple E-com Web App**
+**Simple E-com Web App** (Boilerplate/Working Prototype)
 
 
 
