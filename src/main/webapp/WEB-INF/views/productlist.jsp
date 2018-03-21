@@ -23,7 +23,7 @@
                 <th>Category</th>
                 <th>Condition</th>
                 <th>Price</th>
-                <th>Action</th>
+                <th>Details</th>
             </tr>
             </thead>
 

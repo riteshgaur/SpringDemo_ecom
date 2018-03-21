@@ -19,12 +19,12 @@
 
         <div class="col-md-5"><img src="#" alt="Image" style="width: 100%; height: 300px%"></div>
         <div class="col-md-5">
-            <h3>${product.name}</h3>
-            <p>${product.description}</p>
-            <p>${product.category}</p>
-            <p>${product.condition}</p>
-            <P>$${product.price}</P>
-            <p>${product.instock}</p>
+            <h3><b>Name:</b>${product.name}</h3>
+            <p><b>Description:</b>${product.description}</p>
+            <p><b>Category:</b>${product.category}</p>
+            <p><b>Condition:</b>${product.condition}</p>
+            <P><b>Price:$</b>${product.price}</P>
+            <p><b>Stock:</b>${product.instock}</p>
         </div>
 
     </div>

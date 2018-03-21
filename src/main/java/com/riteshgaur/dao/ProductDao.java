@@ -42,7 +42,7 @@ public class ProductDao {
         p2.setManufacturer("RGPubHouse");
 
         Product p3 = new Product();
-        p2.setProductID("003");
+        p3.setProductID("003");
         p3.setName("Guitar Pick");
         p3.setCategory("Instrument");
         p3.setDescription("Guitar Pick HARD");
