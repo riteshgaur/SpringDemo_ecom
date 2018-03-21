@@ -2,6 +2,7 @@ package com.riteshgaur.dao;
 
 import com.riteshgaur.model.Product;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class ProductDao {
 
         Product p1 = new Product();
 
-
+        p1.setProductID("001");
         p1.setName("Guitar");
         p1.setCategory("Instrument");
         p1.setDescription("Spanish Guitar");
@@ -28,7 +29,9 @@ public class ProductDao {
         p1.setInstock(10);
         p1.setManufacturer("Gibson");
 
+
         Product p2 = new Product();
+        p2.setProductID("002");
         p2.setName("Art of Living");
         p2.setCategory("Books");
         p2.setDescription("Change of Lifestyle, improve your life");
@@ -39,6 +42,7 @@ public class ProductDao {
         p2.setManufacturer("RGPubHouse");
 
         Product p3 = new Product();
+        p2.setProductID("003");
         p3.setName("Guitar Pick");
         p3.setCategory("Instrument");
         p3.setDescription("Guitar Pick HARD");
@@ -56,6 +60,19 @@ public class ProductDao {
         productList.add(p3);
         return productList;
 
+
+    }
+
+
+    public Product getProductbyID(String productID) throws IOException {
+
+        for (Product product : getProductList()) {
+            if (product.getProductID().equals(productID)) {
+                return product;
+
+            }
+        }
+        throw new IOException("NO Product found!");
 
     }
 

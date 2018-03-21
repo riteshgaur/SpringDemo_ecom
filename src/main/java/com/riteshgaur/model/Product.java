@@ -2,10 +2,20 @@ package com.riteshgaur.model;
 
 public class Product {
 
+    private String productID;
     private String name;
     private String category;
     private String  description;
     private Double price;
+
+    public String getProductID() {
+        return productID;
+    }
+
+    public void setProductID(String productID) {
+        this.productID = productID;
+    }
+
     private String condition;
     private String status;
     private int instock;
