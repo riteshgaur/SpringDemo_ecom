@@ -32,6 +32,7 @@
           <element id="library" level="project" name="Maven: com.h2database:h2:1.4.197" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:5.0.4.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">

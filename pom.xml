@@ -75,6 +75,14 @@
       <version>5.0.4.RELEASE</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-orm</artifactId>
+      <version>5.0.4.RELEASE</version>
+    </dependency>
+
+
   </dependencies>
   <build>
     <finalName>SpringDemo</finalName>
