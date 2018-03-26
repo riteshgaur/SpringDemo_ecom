@@ -1,8 +1,8 @@
 package com.riteshgaur.controller;
 
 import com.riteshgaur.dao.ProductDao;
+import com.riteshgaur.dao.imp.ProductDaoImp;
 import com.riteshgaur.model.Product;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,8 +16,7 @@ public class HomeController {
 
     // private ProductDao_dead productDao = new ProductDao_dead();
 
-    @Autowired
-    private ProductDao productDao;
+    private ProductDao productDao = new ProductDaoImp();
 
     @RequestMapping("/")
    public String home(){
@@ -25,7 +24,7 @@ public class HomeController {
     }
 
 
-    @RequestMapping("/productlist")
+    @RequestMapping("/productList")
     public String getProducts(Model model){
 
         List<Product> productList = productDao.getAllProducts();
@@ -36,7 +35,7 @@ public class HomeController {
 
     }
 
-    @RequestMapping("/productList")
+    @RequestMapping("/productlist")
     public String viewProduct() {
 
 
