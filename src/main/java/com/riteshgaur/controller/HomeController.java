@@ -2,18 +2,22 @@ package com.riteshgaur.controller;
 
 import com.riteshgaur.dao.ProductDao;
 import com.riteshgaur.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.io.IOException;
 import java.util.List;
 
 @Controller
 public class HomeController {
 
-    private ProductDao productDao = new ProductDao();
+
+    // private ProductDao_dead productDao = new ProductDao_dead();
+
+    @Autowired
+    private ProductDao productDao;
 
     @RequestMapping("/")
    public String home(){
@@ -24,7 +28,7 @@ public class HomeController {
     @RequestMapping("/productlist")
     public String getProducts(Model model){
 
-        List<Product> productList = productDao.getProductList() ;
+        List<Product> productList = productDao.getAllProducts();
        // Product products = productList.get();
         model.addAttribute("productList",productList);
 
@@ -40,8 +44,8 @@ public class HomeController {
     }
 
     @RequestMapping("/productList/viewProduct/{productID}")
-    public String viewProduct(@PathVariable String productID, Model model) throws IOException {
-        Product product = productDao.getProductbyID(productID);
+    public String viewProduct(@PathVariable String productID, Model model) {
+        Product product = productDao.getProductbyId(productID);
         model.addAttribute(product);
 
         return "viewProduct";
