@@ -7,52 +7,48 @@
 <%@include file="/WEB-INF/views/HeaderFooter/header.jsp" %>
 
 
-
 <div class="container">
     <br>
 
     <h1>All Products</h1>
-        <p> All the listed products</p>
+    <p> All the listed products</p>
 
-        <table class="table table-hover table-responsive">
+    <table class="table table-hover table-responsive">
 
-            <thead class="thead-dark">
+        <thead class="thead-dark">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Condition</th>
+            <th>Price</th>
+            <th>Details</th>
+        </tr>
+        </thead>
+
+        <c:forEach items="${productList}" var="product">
+
             <tr>
-                <th>Image</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Condition</th>
-                <th>Price</th>
-                <th>Details</th>
+                <td><img src="#" alt="productImage"></td>
+                <td>${product.name}</td>
+                <td>${product.category}</td>
+                <td>${product.condition}</td>
+                <td>$${product.price}</td>
+                <!--above $ for price tag, do not get confused with JSTL $ next to it -->
+                <td><a href="<spring:url value="/productList/viewProduct/${product.productID}"/>">
+                    <img src="<c:url value="/resources/bootstrap4/svg/aperture.svg"/>" alt="icon name"
+                         style="width: 16px; height: 16px"></a></td>
             </tr>
-            </thead>
-
-            <c:forEach items="${productList}" var="product">
-
-                <tr>
-                    <td><img src="#" alt="productImage"></td>
-                    <td>${product.name}</td>
-                    <td>${product.category}</td>
-                    <td>${product.condition}</td>
-                    <td>$${product.price}</td>
-                    <!--above $ for price tag, do not get confused with JSTL $ next to it -->
-                    <td><a href="<spring:url value="/productList/viewProduct/${product.productID}"/>">
-                        <img src="<c:url value="/resources/bootstrap4/svg/aperture.svg"/>" alt="icon name"
-                             style="width: 16px; height: 16px"></a></td>
-                </tr>
 
 
-            </c:forEach>
+        </c:forEach>
 
 
-        </table>
-
+    </table>
 
 
 </div>
 <!-- /.container -->
-
-
 
 
 <%@include file="/WEB-INF/views/HeaderFooter/footer.jsp" %>

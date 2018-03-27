@@ -10,7 +10,7 @@ import java.util.List;
 //Lets create some dummy data just to check the waters
 
 
-public class ProductDao_dead {
+public class ProductDao_x {
 
 
     private List<Product> productList;

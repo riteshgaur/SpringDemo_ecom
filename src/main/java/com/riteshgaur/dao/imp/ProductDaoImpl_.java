@@ -1,35 +1,40 @@
+/*
 package com.riteshgaur.dao.imp;
 
-import com.riteshgaur.dao.ProductDao;
-import com.riteshgaur.model.Product;
+import com.emusicstore.dao.ProductDao;
+import com.emusicstore.model.Product;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.util.List;
+
+*/
+/**
+ * Created by Le on 1/6/2016.
+ *//*
+
 
 @Repository
 @Transactional
-public class ProductDaoImp implements ProductDao {
+public class ProductDaoImpl_ implements ProductDao {
 
     @Autowired
     private SessionFactory sessionFactory;
 
     public void addProduct(Product product) {
-
         Session session = sessionFactory.getCurrentSession();
         session.saveOrUpdate(product);
         session.flush();
-
     }
 
-    public Product getProductbyId(String id) {
-
+    public Product getProductById(String id) {
         Session session = sessionFactory.getCurrentSession();
-        Product product = session.get(Product.class, id);
+        Product product = (Product) session.get(Product.class, id);
+        session.flush();
 
         return product;
     }
@@ -38,18 +43,15 @@ public class ProductDaoImp implements ProductDao {
         Session session = sessionFactory.getCurrentSession();
         Query query = session.createQuery("from Product");
         List<Product> products = query.list();
-
         session.flush();
+
         return products;
-
     }
 
-    public void deleteProduct(String id) {
+    public void deleteProduct (String id) {
         Session session = sessionFactory.getCurrentSession();
-        session.delete(getProductbyId(id));
+        session.delete(getProductById(id));
         session.flush();
-
-
     }
-
 }
+*/

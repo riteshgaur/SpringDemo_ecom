@@ -1,8 +1,8 @@
 package com.riteshgaur.controller;
 
 import com.riteshgaur.dao.ProductDao;
-import com.riteshgaur.dao.imp.ProductDaoImp;
 import com.riteshgaur.model.Product;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,37 +14,35 @@ import java.util.List;
 public class HomeController {
 
 
-    // private ProductDao_dead productDao = new ProductDao_dead();
-
-    private ProductDao productDao = new ProductDaoImp();
+    @Autowired
+    private ProductDao productDao;
 
     @RequestMapping("/")
-   public String home(){
+    public String home() {
         return "index";
     }
 
 
-    @RequestMapping("/productList")
-    public String getProducts(Model model){
+    @RequestMapping("/productlist")
+    public String getProducts(Model model) {
 
         List<Product> productList = productDao.getAllProducts();
-       // Product products = productList.get();
-        model.addAttribute("productList",productList);
+        // Product products = productList.get();
+        model.addAttribute("productList", productList);
 
         return "productlist";
 
     }
 
-    @RequestMapping("/productlist")
+   /* @RequestMapping("/productlist")
     public String viewProduct() {
 
-
-        return "viewProduct";
-    }
+        return "productlist";
+    }*/
 
     @RequestMapping("/productList/viewProduct/{productID}")
     public String viewProduct(@PathVariable String productID, Model model) {
-        Product product = productDao.getProductbyId(productID);
+        Product product = productDao.getProductById(productID);
         model.addAttribute(product);
 
         return "viewProduct";
