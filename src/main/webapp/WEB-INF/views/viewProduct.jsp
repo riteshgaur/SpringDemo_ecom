@@ -17,7 +17,8 @@
 
     <div class="row">
 
-        <div class="col-md-5"><img src="#" alt="Image" style="width: 100%; height: 300px%"></div>
+        <div class="col-md-5"><img src="<c:url value="/resources/images/${product.productID}.png"/>" alt="Product-Image"
+                                   style="width: 280px; height:400px"/></div>
         <div class="col-md-5">
             <h3><b>Name:</b>${product.name}</h3>
             <p><b>Description:</b>${product.description}</p>

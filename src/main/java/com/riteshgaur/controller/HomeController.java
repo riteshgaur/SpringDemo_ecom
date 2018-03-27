@@ -92,11 +92,14 @@ public class HomeController {
 
     @RequestMapping(value = "/admin/productInventory/addProduct", method = RequestMethod.POST)
     public String addProduct(@ModelAttribute("product") Product product, HttpServletRequest request) {
+
         productDao.addProduct(product);
 
         MultipartFile productImage = product.getImage();
         String rootDirectory = request.getSession().getServletContext().getRealPath("/");
-        path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + product.getProductID() + ".png");
+        //path = Paths.get(rootDirectory + "\\WEB-INF\\resources\\images\\" + product.getProductID() + ".png");
+        path = Paths.get(rootDirectory + "/WEB-INF/resources/images/" + product.getProductID() + ".png");
+
         if (productImage != null && !productImage.isEmpty()) {
             try {
 
