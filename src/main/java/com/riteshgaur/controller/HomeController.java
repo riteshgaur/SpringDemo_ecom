@@ -73,9 +73,9 @@ public class HomeController {
     public String addProduct(Model model) {
 
         Product product = new Product();
-        product.setCategory("Books");
+       /* product.setCategory("Books");
         product.setCondition("New");
-        product.setStatus("Active");
+        product.setStatus("Active");*/
 
         model.addAttribute("product", product);
 
@@ -89,6 +89,18 @@ public class HomeController {
 
         return "redirect:/admin/productInventory";
     }
+
+
+    @RequestMapping("/admin/productInventory/deleteProduct/{id}")
+    public String deleteProduct(@PathVariable String id, Model model) {
+
+        Product product = productDao.getProductById(id);
+        model.addAttribute(product);
+
+        return "addProduct";
+
+    }
+
 
     /*
     public ModelAndView hello() {

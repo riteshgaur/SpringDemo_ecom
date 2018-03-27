@@ -1,3 +1,4 @@
+/*
 package com.riteshgaur.dao;
 
 import com.riteshgaur.model.Product;
@@ -74,3 +75,4 @@ public class ProductDao_x {
     }
 
 }
+*/

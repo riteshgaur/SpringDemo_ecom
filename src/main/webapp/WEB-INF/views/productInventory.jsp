@@ -7,6 +7,7 @@
 <div class="container-wrapper">
     <div class="container">
         <div class="page-header">
+            <br>
             <h1>Product Inventory Page</h1>
 
             <p class="lead">This is the product inventory page!</p>

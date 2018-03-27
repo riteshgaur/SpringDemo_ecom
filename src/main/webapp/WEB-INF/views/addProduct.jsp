@@ -50,9 +50,11 @@
         <div class="form-group">
             <label for="status">Status</label>
             <label class="checkbox-inline"><form:radiobutton path="status" id="status"
-                                                             value="active"/>Active</label>
+                                                             value="Avaialble"/>Avaialble
+            </label>
             <label class="checkbox-inline"><form:radiobutton path="status" id="status"
-                                                             value="inactive"/>Inactive</label>
+                                                             value="NOTAvaialble"/>Not-Avaialble
+            </label>
         </div>
 
         <div class="form-group">
