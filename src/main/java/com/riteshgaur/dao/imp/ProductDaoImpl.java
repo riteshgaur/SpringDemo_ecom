@@ -15,8 +15,12 @@ import java.util.List;
 @Transactional
 public class ProductDaoImpl implements ProductDao {
 
+    private final SessionFactory sessionFactory;
+
     @Autowired
-    private SessionFactory sessionFactory;
+    public ProductDaoImpl(SessionFactory sessionFactory) {
+        this.sessionFactory = sessionFactory;
+    }
 
     public void addProduct(Product product) {
 

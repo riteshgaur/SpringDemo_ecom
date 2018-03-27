@@ -13,8 +13,6 @@ import java.util.List;
 public class ProductDao_x {
 
 
-    private List<Product> productList;
-
     public List<Product> getProductList() {
 
         Product p1 = new Product();
@@ -53,7 +51,7 @@ public class ProductDao_x {
         p3.setManufacturer("Gibson");
 
 
-        productList = new ArrayList<Product>();
+        List<Product> productList = new ArrayList<Product>();
         productList.add(p1);
         productList.add(p2);
         productList.add(p3);

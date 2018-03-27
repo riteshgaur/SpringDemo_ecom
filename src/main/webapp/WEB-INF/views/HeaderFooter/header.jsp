@@ -45,7 +45,7 @@
                     <a class="nav-link" href="<c:url value="/productlist"/>">Products</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link" href="<c:url value="/admin"/>">Admin</a>
                 </li>
             </ul>
             <form class="form-inline mt-2 mt-md-0">
