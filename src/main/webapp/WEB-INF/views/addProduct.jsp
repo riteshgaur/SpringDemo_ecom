@@ -12,7 +12,7 @@
             <p class="lead">Fill the below information to add a product:</p>
         </div>
 
-        <form:form action="#" method="post" modelAttribute="product">
+        <form:form action="#" method="post" modelAttribute="product" enctype="multipart/form-data">
 
         <div class="form-group">
             <label for="name">Name</label>
@@ -66,6 +66,14 @@
             <label for="manufacturer">Manufacturer</label>
             <form:input path="manufacturer" id="manufacturer" class="form-Control"/>
         </div>
+
+
+        <div class="form-group">
+            <label for="image">Upload Image</label>
+            <form:input path="image" type="file" class="form:input"/>
+
+        </div>
+
 
         <br><br>
         <input type="submit" value="submit" class="btn btn-default">

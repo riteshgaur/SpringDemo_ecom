@@ -22,7 +22,9 @@
                 <th>Category</th>
                 <th>Condition</th>
                 <th>Price</th>
+                <th>Delete</th>
                 <th>Details</th>
+
             </tr>
             </thead>
 
@@ -35,9 +37,15 @@
                     <td>${product.condition}</td>
                     <td>$${product.price}</td>
                     <!--above $ for price tag, do not get confused with JSTL $ next to it -->
+
+                    <td><a href="<spring:url value="/admin/productInventory/deleteProduct/${product.productID}"/>">
+                        <img src="<c:url value="/resources/bootstrap4/svg/circle-x.svg"/>" alt="icon name"
+                             style="width: 16px; height: 16px"></a></td>
                     <td><a href="<spring:url value="/productList/viewProduct/${product.productID}"/>">
                         <img src="<c:url value="/resources/bootstrap4/svg/aperture.svg"/>" alt="icon name"
-                             style="width: 16px; height: 16px"></a></td>
+                             style="width: 16px; height: 16px"></a>
+                    </td>
+                </tr>
                 </tr>
 
 

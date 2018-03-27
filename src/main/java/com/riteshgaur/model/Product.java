@@ -2,6 +2,7 @@ package com.riteshgaur.model;
 
 
 import org.hibernate.annotations.GenericGenerator;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +23,20 @@ public class Product {
     private String condition;
     private String status;
     private int instock;
+
+    @javax.persistence.Transient
+    private MultipartFile image;
+
+    public MultipartFile getImage() {
+        return image;
+    }
+
+    public void setImage(MultipartFile image) {
+        this.image = image;
+    }
+
     private String manufacturer;
+
 
     public String getProductID() {
         return productID;
