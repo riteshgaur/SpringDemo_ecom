@@ -19,12 +19,12 @@ public class CartDaoImlp implements CartDao {
 
     public Cart create(Cart cart) {
 
-        if (listOfCarts.keySet().contains((cart.getCardID()))) {
+        if (listOfCarts.keySet().contains((cart.getCartId()))) {
 
-            throw new IllegalArgumentException(String.format("Cannot create a cart. A cart with the given ID(%)" + "already exists", cart.getCardID()));
+            throw new IllegalArgumentException(String.format("Cannot create a cart. A cart with the given ID(%)" + "already exists", cart.getCartId()));
         }
 
-        listOfCarts.put(cart.getCardID(), cart);
+        listOfCarts.put(cart.getCartId(), cart);
 
         return cart;
     }

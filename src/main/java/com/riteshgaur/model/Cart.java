@@ -41,12 +41,12 @@ public class Cart {
     }
 
 
-    public String getCardID() {
+    public String getCartId() {
         return cartId;
     }
 
-    public void setCardID(String cardID) {
-        this.cartId = cardID;
+    public void setCartId(String cartId) {
+        this.cartId = cartId;
     }
 
     public Map<String, CartItem> getCartItems() {

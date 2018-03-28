@@ -4,7 +4,7 @@ var cartApp = angular.module("cartApp", []);
 
 cartApp.controller("cartCtrl", function ($scope, $http) {
 
-    $scope.refreshCart = function (cardId) {
+    $scope.refreshCart = function () {
         $http.get('/SpringDemo/rest/cart/' + $scope.cartId).success(function (data) {
             $scope.cart = data;
         });

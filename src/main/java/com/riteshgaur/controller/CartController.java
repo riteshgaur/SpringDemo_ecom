@@ -24,14 +24,14 @@ public class CartController {
 
     @RequestMapping(value = "/{cartId}", method = RequestMethod.GET)
     public @ResponseBody
-    Cart read(@PathVariable(value = "cardId") String cartId) {
+    Cart read(@PathVariable(value = "cartId") String cartId) {
         return cartDao.read(cartId);
     }
 
 
     @RequestMapping(value = "/{cartId}", method = RequestMethod.PUT)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    public void update(@PathVariable(value = "cardId") String cartId, @RequestBody Cart cart) {
+    public void update(@PathVariable(value = "cartId") String cartId, @RequestBody Cart cart) {
 
         cartDao.updateCart(cartId, cart);
     }
@@ -39,7 +39,7 @@ public class CartController {
 
     @RequestMapping(value = "/{cartId}", method = RequestMethod.DELETE)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
-    public void delete(@PathVariable(value = "cardId") String cartId) {
+    public void delete(@PathVariable(value = "cartId") String cartId) {
 
         cartDao.deletefromCart(cartId);
 

@@ -27,27 +27,30 @@
             <p><b>Condition:</b>${product.condition}</p>
             <P><b>Price:$</b>${product.price}</P>
             <p><b>Stock:</b>${product.instock}</p>
+            <br>
+            <hr>
+            <c:set var="role" scope="page" value="${param.role}"/>
+            <c:set var="url" scope="page" value="/productlist"/>
+            <c:if test="${role='admin'}">
+                <c:set var="url" scope="page" value="/admin/productInventory"/>
+            </c:if>
+
+            <p ng-controller="cartCtrl">
+                <a href="<c:url value="${url}"/>" class="btn btn-default">Back</a>
+                <a href="#" class="btn btn-warning btn-large"
+                   ng-click="addToCart('${product.productID}')">Order
+                    Now</a>
+                <a href="<spring:url value="/cart" />"
+                   class="btn btn-default">View Cart</a>
+            </p>
+
+
         </div>
 
 
     </div>
 
-    <hr>
-    <c:set var="role" scope="page" value="${param.role}"/>
-    <c:set var="url" scope="page" value="/product/productList"/>
-    <c:if test="${role='admin'}">
-        <c:set var="url" scope="page" value="/admin/productInventory"/>
-    </c:if>
 
-    <p ng-controller="cartCtrl">
-        <a href="<c:url value="${url}" />" class="btn btn-default">Back</a>
-        <a href="#" class="btn btn-warning btn-large"
-           ng-click="addToCart('${product.productID}')"><span
-                class="glyphicon glyphicon-shopping-cart"></span>Order
-            Now</a>
-        <a href="<spring:url value="/cart" />"
-           class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span>View Cart</a>
-    </p>
 
 </div>
 
