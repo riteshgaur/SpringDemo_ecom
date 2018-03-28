@@ -4,14 +4,14 @@ var cartApp = angular.module("cartApp", []);
 
 cartApp.controller("cartCtrl", function ($scope, $http) {
 
-    $scope.refreshCart = function () {
-        $http.get('/rest/cart/' + $scope.cartId).success(function (data) {
+    $scope.refreshCart = function (cardId) {
+        $http.get('/SpringDemo/rest/cart/' + $scope.cartId).success(function (data) {
             $scope.cart = data;
         });
     };
 
     $scope.clearCart = function () {
-        $http.delete('rest/cart/' + $scope.cartId).success($scope.refreshCart());
+        $http.delete('/SpringDemo/rest/cart/' + $scope.cartId).success($scope.refreshCart());
     };
 
     $scope.initCartId = function (cartId) {
@@ -20,13 +20,13 @@ cartApp.controller("cartCtrl", function ($scope, $http) {
     };
 
     $scope.addToCart = function (productId) {
-        $http.put('/rest/cart/add/' + productId).success(function () {
+        $http.put('/SpringDemo/rest/cart/add/' + productId).success(function () {
             alert("Product successfully added to the cart!")
         });
     };
 
     $scope.removeFromCart = function (productId) {
-        $http.put('/rest/cart/remove/' + productId).success(function (data) {
+        $http.put('/SpringDemo/rest/cart/remove/' + productId).success(function (data) {
             $scope.refreshCart();
         });
     };
