@@ -23,7 +23,7 @@
             </div>
         </section>
 
-        <section class="container" ng-app="cartApp">
+        <section class="container" data-ng-app="cartApp" }>
             <div ng-controller="cartCtrl" ng-init="initCartId('${cartId}')">
                 <div>
                     <a class="btn btn-danger pull-left" ng-click="clearCart()"><span
@@ -67,7 +67,7 @@
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-<script src="<c:url value="/resources/js/controller.js" /> "></script>
+<script src="<c:url value="/resources/bootstrap4/js/controller.js" /> "></script>
 
 
 <%@include file="/WEB-INF/views/HeaderFooter/header.jsp" %>

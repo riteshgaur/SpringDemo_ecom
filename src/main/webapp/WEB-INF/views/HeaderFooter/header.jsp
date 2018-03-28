@@ -18,8 +18,10 @@
 
 
     <!-- Angular JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
-    <script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <%--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>--%>
+    <%--<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>--%>
+    <%--<script src="/resources/bootstrap4/js/angular.min.js"></script>--%>
+    <script src="<c:url value="/resources/bootstrap4/js/angular.min.js"/>"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/bootstrap4/css/bootstrap.css"/>" rel="stylesheet">

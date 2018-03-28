@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping("/cart")
 public class CartItemController {
 
-    @RequestMapping("/x")
+    @RequestMapping
     public String get(HttpServletRequest request) {
 
         return "redirect:/cart/" + request.getSession(true).getId();
