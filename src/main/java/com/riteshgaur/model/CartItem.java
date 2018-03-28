@@ -6,6 +6,15 @@ public class CartItem {
     private int quantity;
     private double totalPrice;
 
+
+    public CartItem(Product product) {
+
+        this.product = product;
+        this.quantity = 1;
+        this.totalPrice = product.getPrice();
+
+    }
+
     public Product getProduct() {
         return product;
     }

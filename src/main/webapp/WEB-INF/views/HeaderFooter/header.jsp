@@ -16,6 +16,10 @@
 
     <title>RG E-Com Shop!</title>
 
+
+    <!-- Angular JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
     <!-- Bootstrap core CSS -->
     <link href="<c:url value="/resources/bootstrap4/css/bootstrap.css"/>" rel="stylesheet">
 
