@@ -6,6 +6,12 @@
 
 -Maven
 
+-Angular JS
+
+-Hibernate
+
+-H2
+
 **This Demo has the following kind of code** **;)**
 
 -**regular code** : without comments to start with. Documentation you said… ah! 
