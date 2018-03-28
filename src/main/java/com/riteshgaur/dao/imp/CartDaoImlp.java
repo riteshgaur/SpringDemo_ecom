@@ -2,10 +2,12 @@ package com.riteshgaur.dao.imp;
 
 import com.riteshgaur.dao.CartDao;
 import com.riteshgaur.model.Cart;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class CartDaoImlp implements CartDao {
 
     private Map<String, Cart> listOfCarts;
