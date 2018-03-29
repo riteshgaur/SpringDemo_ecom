@@ -1,10 +1,8 @@
-
-
-var cartApp = angular.module("cartApp", []);
+var cartApp = angular.module("cartApp", ['ngRoute']);
 
 cartApp.controller("cartCtrl", function ($scope, $http) {
 
-    $scope.refreshCart = function () {
+    $scope.refreshCart = function (cartId) {
         $http.get('/SpringDemo/rest/cart/' + $scope.cartId).success(function (data) {
             $scope.cart = data;
         });
